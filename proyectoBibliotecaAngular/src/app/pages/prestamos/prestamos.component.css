@@ -1,0 +1,70 @@
+
+*{  
+    padding-top: 10px;
+    padding-left: 5%;
+    padding-right: 5%;
+    word-spacing: 2px;
+    font-size: 18px;
+    transition: 2s;
+}
+
+.pagPrestamos{
+    height: 30em;
+    color: rgb(22, 21, 21);
+    background-color: rgb(228, 242, 254);
+    margin-right: 30px;
+    margin-left: 320px;
+    box-shadow: 0px 0px 10px 2px rgba(0, 101, 242, 0.326);
+}
+h2{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-left: 0;
+    font-size: 25px;
+}
+
+.pagPrestamos .containerPrestamo {
+    text-align: center;
+    width: 60%;
+    margin-left:-5%;
+}
+
+.pagPrestamos .containerPrestamo h3 {
+	font-size:20px;
+}
+
+.pagPrestamos .containerPrestamo input{
+	width: 80%;
+	border: 1px solid white;
+    border-radius: 5px;
+	border-bottom: 1px solid #2860d7;
+	padding-bottom: 10px;
+    padding-left: 1%;
+	
+}
+
+.pagPrestamos .containerPrestamo #botonPrestar{
+	margin-top: 50px;
+    margin-bottom: 50px;
+	padding: 10px;
+	border-radius:5px;
+    width: 30%;
+	background-color:#2860d7;
+	color:white;
+	font-size: 15px;
+}
+
+.pagPrestamos .containerPrestamo #botonPrestar:hover{
+    background-color:#103b97;
+    transition: all 0.5s;
+}
+
+.imagenPrestamos{
+    margin-top: -300px;
+    margin-left: 65%;
+    width: 300px;
+    height: 300px;
+    border-radius: 20%;
+    box-shadow: 0px 1px rgba(0, 0, 0, 0.188);
+
+}
