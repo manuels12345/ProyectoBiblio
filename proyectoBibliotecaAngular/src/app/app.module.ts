@@ -11,9 +11,6 @@ import { DevolucionesComponent } from './pages/devoluciones/devoluciones.compone
 import { UsuariosComponent } from './pages/usuarios/usuarios.component';
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { DataTableComponent } from './components/data-table/data-table.component';
-import { DateFormatterPipe } from './pipes/date-formatter.pipe';
-import { DynamicPipe } from './pipes/dynamic.pipe';
 
 @NgModule({
   declarations: [
@@ -23,9 +20,6 @@ import { DynamicPipe } from './pipes/dynamic.pipe';
     PrestamosComponent,
     DevolucionesComponent,
     UsuariosComponent,
-    DataTableComponent,
-    DynamicPipe,
-    DateFormatterPipe,
   ],
   imports: [
     BrowserModule,
@@ -35,7 +29,7 @@ import { DynamicPipe } from './pipes/dynamic.pipe';
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [DateFormatterPipe, DynamicPipe],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
