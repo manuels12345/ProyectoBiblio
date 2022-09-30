@@ -1,0 +1,25 @@
+<div class="container">
+  <table class="table table-hover border-dark">
+    <thead class="table-dark">
+      <tr>
+        <th scope="col">id</th>
+        <th scope="col">Titulo</th>
+        <th scope="col">Author</th>
+        <th scope="col">Category</th>
+        <th scope="col">Lang</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let libro of libros; index as i">
+        <th scope="row">{{libro.id}}</th>
+        <td>{{libro.title}}</td>
+        <td>{{libro.author}}</td>
+        <td>{{libro.category}}</td>
+        <td>{{libro.lang}}</td>
+        <td><button type="button" class="btn btn-primary">Reservar</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+

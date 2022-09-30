@@ -11,6 +11,7 @@ import { DevolucionesComponent } from './pages/devoluciones/devoluciones.compone
 import { UsuariosComponent } from './pages/usuarios/usuarios.component';
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { LibrosComponent } from './pages/libros/libros.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { HttpClientModule } from '@angular/common/http';
     PrestamosComponent,
     DevolucionesComponent,
     UsuariosComponent,
+    LibrosComponent,
   ],
   imports: [
     BrowserModule,
