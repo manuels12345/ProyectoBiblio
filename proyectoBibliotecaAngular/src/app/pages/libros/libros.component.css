@@ -1,0 +1,9 @@
+.container{
+  padding-left: 50px;
+  padding-top: 100px;
+}
+
+.table{
+  border: solid;
+  border-width: 2px;
+}

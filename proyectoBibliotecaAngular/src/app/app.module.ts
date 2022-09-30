@@ -14,6 +14,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { DataTableComponent } from './components/data-table/data-table.component';
 import { DateFormatterPipe } from './pipes/date-formatter.pipe';
 import { DynamicPipe } from './pipes/dynamic.pipe';
+import { LibrosComponent } from './pages/libros/libros.component';
+
 
 @NgModule({
   declarations: [
@@ -26,6 +28,7 @@ import { DynamicPipe } from './pipes/dynamic.pipe';
     DataTableComponent,
     DynamicPipe,
     DateFormatterPipe,
+    LibrosComponent
   ],
   imports: [
     BrowserModule,

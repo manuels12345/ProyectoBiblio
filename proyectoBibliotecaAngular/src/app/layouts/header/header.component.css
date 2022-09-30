@@ -4,13 +4,13 @@
 .navbarPrincipal{
     background-color: rgba(13, 72, 161, 0.878);
     flex-basis: 20rem;
-    flex-grow: 1; 
-    width:250px;
+    flex-grow: 1;
+    width:auto;
     height: 100%;
     padding: 20px;
     font-size: 25px;
     position:absolute;
- 
+
 }
 
 .navbarPrincipal h2{
@@ -24,8 +24,8 @@
 .navbarPrincipal ul{
     text-align: left;
     padding-left: 0;
-    
-    
+
+
 }
 .navbarPrincipal ul li {
     padding: 15px;
@@ -41,7 +41,7 @@
     transition: all 1s;
    }
 
-   
+
 .navbarPrincipal ul li img {
     padding:0 15px 0 0;
     list-style-type:none;
@@ -53,3 +53,5 @@
  color: rgb(215, 244, 250);
 
 }
+
+
