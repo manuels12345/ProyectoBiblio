@@ -1,72 +1,133 @@
-
-*{  
-    padding-left: 5%;
-    padding-right: 5%;
-    word-spacing: 2px;
-    font-size: 16px;
+*{
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.8s;
 }
 
-.pagUsuarios{
-    height: 42em;
-    color: rgb(22, 21, 21);
-    background-color: rgb(228, 242, 254);
-    margin-right: 30px;
-    margin-left: 320px;
-    box-shadow: 0px 0px 10px 2px rgba(0, 101, 242, 0.326);
+.formularioUsuario{
+    margin:20px 10px 0 210px;
+    background-color: #299bff42;
+    padding: 30px 20px;
+    border-radius: 5px;
+    box-shadow: -2px 2px 2px rgba(0, 0, 0, 0.188);
 }
 
-h2{
-    padding-top:30px;
-    padding-bottom: 20px;
-    margin-left: -5%;
+.formularioUsuario h2{
+    padding-left: 10px;
     font-size: 25px;
 }
 
-.pagUsuarios .containerUsuario {
+.formularioUsuario .form-row{
+    margin-left:20%;
+    height: 450px;
+    padding: 20px 15px;
+    font-size: 18px;
+}
+.formularioUsuario .form-row .form-group{
     text-align: center;
-    width: 60%;
-    margin-left:-10%;
-    display: block;
+    width: 700px;
+    padding-top: 10px;
 }
 
-.pagUsuarios .containerUsuario h3 {
-	font-size:20px;
-    margin-top: 2px;
-
+.formularioUsuario .form-row .form-group input{
+    padding: 2px;
 }
 
-.pagUsuarios .containerUsuario input{
-	width: 80%;
-	border: 1px solid white;
-	border-bottom: 1px solid #2860d7;
-    padding-top: 5px;
-	padding-bottom: 2px;
-    padding-left: 1%;
-	
+.btn{
+     margin-top: 30px;
+     margin-left:15em;
+     padding: 10px;
+    
 }
 
-.pagUsuarios .containerUsuario #botonRegistrar{
-	margin-top: 50px;
-    margin-bottom: 50px;
-	padding: 10px;
-	border-radius:5px;
-    width: 30%;
-	background-color:#2860d7;
-	color:white;
-	font-size: 15px;
+@media (max-width:1024px){
+    .formularioUsuario .form-row{
+        height: 470px;
+    }
+    .formularioUsuario .form-row .form-group{
+        width: 450px;
+        padding-top: 10px;
+    }
+    .btn{
+        margin-left:10em;     
+   }
+}   
+@media (max-width:768px){
+    .formularioUsuario{
+        margin:10px 10px 0 180px;
+    }
+    .formularioUsuario h2{
+        font-size: 20px;
+    }
+    .formularioUsuario .form-row{
+        height: 400px;
+        font-size: 15px;
+    }
+    .formularioUsuario .form-row .form-group{
+        width: 350px;
+        padding-top: 5px;
+    }
+    .formularioUsuario .form-row .form-group input{
+        font-size: 12px;
+    }
+    .btn{
+        margin-left:8em;     
+        font-size: 15px;
+        padding: 5px;
+   }
 }
 
-.pagUsuarios .containerUsuario #botonRegistrar:hover{
-    background-color:#103b97;
-    transition: all 0.5s;
+@media (max-width:480px){
+    .formularioUsuario{
+        margin:5px 10px 0 130px;
+    }
+    .formularioUsuario h2{
+        font-size: 18px;
+    }
+    .formularioUsuario .form-row{
+        margin-left:10%;
+        height: 400px;
+        font-size: 13px;
+    }
+    .formularioUsuario .form-row .form-group{
+        width: 200px;
+        padding-top: 5px;
+    }
+    .formularioUsuario .form-row .form-group input{
+        font-size: 10px;
+    }
+    .btn{
+        margin-left:6em;     
+        font-size: 10px;
+        padding: 5px;
+   }
 }
 
-.imagenUsuarios{
-    margin-top: -95%;
-    margin-left: 95%;
-    width: 450px;
-    height: 550px;
-    padding-bottom: 5%;
-    border-radius: 10%;
+@media (max-width:320px){
+    .formularioUsuario{
+        margin:5px 15px 0 85px;
+    }
+    .formularioUsuario h2{
+        font-size: 15px;
+        margin-bottom: 0;
+    }
+    .formularioUsuario .form-row{
+        margin-left:0;
+        height: 320px;
+        font-size: 10px;
+    }
+    .formularioUsuario .form-row .form-group{
+        width: 170px;
+        padding-top: 2px;
+    }
+    .formularioUsuario .form-row .form-group input{
+        font-size: 8px;
+    }
+    .btn{
+        margin-left:5em;     
+        font-size: 10px;
+        padding: 5px;
+        margin-top:10px;
+   }
 
 }
