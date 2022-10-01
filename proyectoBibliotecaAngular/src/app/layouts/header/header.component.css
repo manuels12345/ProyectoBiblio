@@ -52,6 +52,15 @@
     color: #fff;
 }
 
+@media (max-width:768px){
+    .navbarPrincipal .containerNavbar{
+        width: 170px;
+    }
+    .navbarPrincipal .containerNavbar h2{
+        margin-bottom: 20px;
+    }
+}    
+
 @media (max-width:480px){
     .navbarPrincipal .containerNavbar{
         width: 120px;
