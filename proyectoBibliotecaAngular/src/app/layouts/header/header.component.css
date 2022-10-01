@@ -1,55 +1,95 @@
 *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
     transition: all 0.8s;
 }
+
 .navbarPrincipal{
-    background-color: rgba(13, 72, 161, 0.878);
-    flex-basis: 20rem;
-    flex-grow: 1; 
-    width:250px;
+    display: flex;
+    position: relative;
+}
+
+.navbarPrincipal .containerNavbar{
+    position: fixed;
+    width: 200px;
     height: 100%;
-    padding: 20px;
-    font-size: 25px;
-    position:absolute;
- 
+    background-color:#0d48a1e0 ;
+    padding: 30px 0;
 }
 
-.navbarPrincipal h2{
-    font-size: 30px;
-    color: rgb(255, 255, 255);
+.navbarPrincipal .containerNavbar h2{
+    color: #f0f8ff;
+    text-transform: uppercase;
     text-align: center;
-    padding-bottom: 10px;
-    border-bottom: 2px solid rgb(255, 255, 255);
+    margin-bottom: 30px;
+    
+}
 
-}
-.navbarPrincipal ul{
-    text-align: left;
-    padding-left: 0;
-    
-    
-}
-.navbarPrincipal ul li {
+.navbarPrincipal .containerNavbar ul li {
     padding: 15px;
-    list-style-type:none;
-
-}
-.navbarPrincipal ul li:hover {
-    background-color: rgba(112, 166, 233, 0.689);
-    transform: translateY(5px);
-    transform: scale(1.05);
-    border: 1px groove;
-    border-radius: 10px;
-    transition: all 1s;
-   }
-
-   
-.navbarPrincipal ul li img {
-    padding:0 15px 0 0;
-    list-style-type:none;
-
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    border-top: 1px solid rgba(225,255,255,0.05);
 }
 
-.navbarPrincipal ul li a {
- text-decoration: none;
- color: rgb(215, 244, 250);
+.navbarPrincipal .containerNavbar ul li a {
+    color: #f0f8ff;
+    display: block;
+}
 
+.navbarPrincipal .containerNavbar ul li a img{
+    padding-right: 5px;
+}
+
+.navbarPrincipal .containerNavbar ul li:hover{
+    background: #70a6e9b0;
+    transition: 0.8s;
+}
+
+.navbarPrincipal .containerNavbar ul li a:hover {
+    color: #fff;
+}
+
+@media (max-width:768px){
+    .navbarPrincipal .containerNavbar{
+        width: 170px;
+    }
+      .navbarPrincipal .containerNavbar h2{
+        margin-bottom: 20px;
+    }
+}    
+
+@media (max-width:480px){
+    .navbarPrincipal .containerNavbar{
+        width: 120px;
+        font-size: 10px;
+    }
+
+    .navbarPrincipal .containerNavbar ul li img{
+        width: 15px;
+        padding-right: 2px;
+    }
+}
+
+@media (max-width:320px){
+    .navbarPrincipal .containerNavbar h2{
+        margin-bottom: 15px;
+    }
+    .navbarPrincipal .containerNavbar{
+        width: 70px;
+        padding: 3px;
+        text-align: center;
+    }
+    .navbarPrincipal .containerNavbar ul li{
+        padding: 10px;
+    }
+    .navbarPrincipal .containerNavbar ul li a {
+        font-size: 8px;
+    }
+    .navbarPrincipal .containerNavbar ul li img {
+        visibility: visible;
+        width: 30px;
+    }
 }
