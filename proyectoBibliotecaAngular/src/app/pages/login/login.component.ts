@@ -1,3 +1,4 @@
+import { HttpErrorResponse, HttpResponse, HttpResponseBase } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -24,27 +25,17 @@ export class LoginComponent implements OnInit {
 
   onSubmit() {
     console.log(this.login.value.username);
-    this.usuariosService.cargarUsuario(this.login.value.username as string).subscribe(user=>{
-      
-      if(user == null){
-        alert("usuario no encontrado");
-      }else{
-      return console.log(user);
-      }
-    })
+    if(!this.login.value.username || !this.login.value.password){
+      //No funciona esta validacion ni comparacion
+      alert("Faltan datos");
+    }else{
+      this.usuariosService.cargarUsuario(this.login.value.username as string).subscribe(user=>{
+        if(this.login.value.username = user.username){
+          this.router.navigate(['/libros']);
+          return alert("Bienvenido " + user.username);
+        }
+      })
+    }
 
-    // if(!this.login.value.username || !this.login.value.password){
-    //   alert("Faltan datos");
-    // }else{
-    //   this.usuariosService.cargarUsuario(this.login.value.username as string).subscribe(user =>{
-    //     if(user.id == null){
-    //       alert("Usuario no encontrado");
-    //       return this.router.navigate(['/usuarios']);
-    //     }else{
-    //       alert("Bienvenido " + user.username);
-    //       return this.router.navigate(['/libros']); 
-    //     }
-    //   });
-    //}
   }
 }
