@@ -11,7 +11,11 @@ import { LibrosService } from 'src/app/servicios/libro.service';
 })
 export class LibrosComponent implements OnInit {
 
+<<<<<<< HEAD
   libros: Libro[] = [];
+=======
+  public libros: Libro[] = [];
+>>>>>>> origin
 
   constructor(private librosService: LibrosService) { }
 
@@ -24,6 +28,10 @@ export class LibrosComponent implements OnInit {
       data.forEach((dato) =>{
         this.libros.push(dato);
       });
+<<<<<<< HEAD
+=======
+      console.log(data);
+>>>>>>> origin
       return data;
     });
   }

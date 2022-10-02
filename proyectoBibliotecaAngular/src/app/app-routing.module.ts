@@ -8,10 +8,13 @@ import { DevolucionesComponent } from './pages/devoluciones/devoluciones.compone
 import { UsuariosComponent } from './pages/usuarios/usuarios.component';
 import { LibrosComponent } from './pages/libros/libros.component';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { LoginComponent } from './pages/login/login.component';
 =======
 import { NuevoUsuarioComponent } from './pages/nuevo-usuario/nuevo-usuario.component';
 >>>>>>> 27d1615a7005b1bcc802b1a2bc5f33d4d5f3ce86
+=======
+>>>>>>> origin
 
 const routes: Routes = [
   {path: '', pathMatch: 'full', redirectTo: 'inicio'},
@@ -20,8 +23,12 @@ const routes: Routes = [
   {path:'login', component:LoginComponent},
   {path: 'devoluciones',component:DevolucionesComponent},
   {path:'usuarios', component:UsuariosComponent},
+<<<<<<< HEAD
   {path:'libros', component:LibrosComponent},
   {path:'nuevousuario', component:NuevoUsuarioComponent}
+=======
+  {path:'libros', component:LibrosComponent}
+>>>>>>> origin
 
 
 ];
