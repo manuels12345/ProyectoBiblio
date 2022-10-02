@@ -8,12 +8,11 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
 @RestController
-
-@RequestMapping("books")
+@CrossOrigin(origins = "http://localhost:4200")
+@RequestMapping("/books")
 public class BookController {
     @Autowired
     private BookService bookService;
-    @CrossOrigin(origins = "http://localhost:4200")
     @GetMapping("/all") // GET http://localhost:8080/books/all (no es necesario logearse)
     public ResponseEntity<List<BookDTO>> getAllBooks(){
         List<BookDTO> books = bookService.getAll();

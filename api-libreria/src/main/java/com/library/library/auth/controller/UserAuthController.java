@@ -6,6 +6,7 @@ import com.library.library.auth.service.JwtUtils;
 import com.library.library.auth.service.UserDetailsCustomService;
 import com.library.library.dto.UserDTO;
 import com.library.library.entity.UserEntity;
+import com.library.library.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -18,23 +19,27 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 @RestController
+@CrossOrigin(origins = "http://localhost:4200")
 @RequestMapping("/auth")
 public class UserAuthController {
     private UserDetailsCustomService userDetailsService;
     private AuthenticationManager authenticationManager;
+    private UserService userService;
     private JwtUtils jwtTokenUtil;
     @Autowired
     public UserAuthController(
             UserDetailsCustomService userDetailsService,
             AuthenticationManager authenticationManager,
-            JwtUtils jwtTokenUtil){
+            JwtUtils jwtTokenUtil,
+            UserService userService){
         this.userDetailsService = userDetailsService;
         this.authenticationManager = authenticationManager;
         this.jwtTokenUtil = jwtTokenUtil;
+        this.userService = userService;
     }
     @PostMapping("/register")
-    public ResponseEntity<AuthenticationResponse> signUp(@Valid @RequestBody UserDTO user) throws Exception{
-        this.userDetailsService.save(user);
+    public ResponseEntity<Boolean> signUp(@Valid @RequestBody UserDTO user) throws Exception{
+        this.userService.save(user);
         return ResponseEntity.status(HttpStatus.CREATED).build();
     }
     @PostMapping("/login")

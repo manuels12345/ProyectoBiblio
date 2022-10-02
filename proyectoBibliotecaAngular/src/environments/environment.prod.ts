@@ -1,8 +1,10 @@
 export const environment = {
-  production: true,
-  apiUrl: '#',
+  production: false,
+  apiUrl: 'http://localhost:8080',
   libraryUrl:'/books',
   librosUrl: '/all',
   prestamosUrl: '/lendings',
-  usuariosUrl: '/users'
+  authUrl:'/auth',
+  usuariosUrl: '/users',
+  registerUrl: '/register'
 };

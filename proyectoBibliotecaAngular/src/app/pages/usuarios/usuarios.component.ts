@@ -1,6 +1,10 @@
+
 import { Component, OnInit } from '@angular/core';
-import { UsuarioService } from '../../servicios/usuario.service';
+import { UsuarioService } from 'src/app/servicios/usuario.service';
 import { Usuario } from '../../models/Usuario';
+import { FormGroup, FormControl } from '@angular/forms';
+import { Router } from '@angular/router';
+import { isEmpty } from 'rxjs';
 
 @Component({
   selector: 'app-usuarios',
@@ -9,19 +13,46 @@ import { Usuario } from '../../models/Usuario';
 })
 export class UsuariosComponent implements OnInit {
 
-  public usuario = new Usuario;
+  registrado:boolean = false;
 
   constructor(
-    private usuariosService: UsuarioService) {}
+    private usuariosService: UsuarioService, private router: Router) {}
 
   ngOnInit(): void {
   }
 
-  onSubmit(nombre:string, apellido:string, direccion:string, tel:string, username:string,pw:string) {
-    return this.usuariosService.agregarUsuario(nombre,apellido,direccion,tel,username,pw).subscribe((data) => {
-      alert(data);
-    });
-  }
+  datos = new FormGroup({
+    username: new FormControl(''),
+    password: new FormControl(''),
+    name: new FormControl(''),
+    lastname: new FormControl(''),
+    address: new FormControl(''),
+    tel: new FormControl('')
+  });
 
+  onSubmit() {
+    const user = new Usuario(
+    
+    this.datos.value['username'] as string,
+    this.datos.value['password'] as string,
+    this.datos.value['name'] as string,
+    this.datos.value['lastname'] as string,
+    this.datos.value['address'] as string,
+    this.datos.value['tel'] as string);
+
+    if(!this.datos.value['username'] || !this.datos.value['password'] || !this.datos.value['name'] || !this.datos.value['lastname'] || !this.datos.value['address'] || !this.datos.value['tel']){
+      alert("Faltan datos");
+    }
+    return this.usuariosService.agregarUsuario(user).subscribe(user => {
+      console.log(user);
+      this.registrado = true;
+      if(!this.registrado){
+        alert("Intenta de nuevo");
+      }else{
+        this.router.navigate(['/login']);
+        return alert("Registro exitoso");
+      }
+    })
+  }
 
 }

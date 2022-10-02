@@ -12,6 +12,7 @@ import { UsuariosComponent } from './pages/usuarios/usuarios.component';
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { LibrosComponent } from './pages/libros/libros.component';
+import { LoginComponent } from './pages/login/login.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { LibrosComponent } from './pages/libros/libros.component';
     DevolucionesComponent,
     UsuariosComponent,
     LibrosComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

@@ -27,22 +27,4 @@ public class UserDetailsCustomService implements UserDetailsService {
         }
         return new User(userEntity.getUsername(), userEntity.getPassword(), Collections.emptyList());
     }
-
-    public boolean save(UserDTO dto) throws IOException {
-        UserEntity entity = new UserEntity();
-        entity.setName(dto.getName());
-        entity.setUsername(dto.getUsername());
-        entity.setPassword(dto.getPassword());
-        entity.setLastname(dto.getLastname());
-        entity.setTel(dto.getTel());
-        entity.setAddress(dto.getAddress());
-        entity.setFault(0.0);
-        entity.setDeleted(false);
-        entity.setAccountNonExpired(true);
-        entity.setAccountNonLocked(true);
-        entity.setCredentialsNonExpired(true);
-        entity.setEnabled(true);
-        entity = this.userRegRepository.save(entity);
-        return entity != null;
-    }
 }

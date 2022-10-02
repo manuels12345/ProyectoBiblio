@@ -11,7 +11,7 @@ import { LibrosService } from 'src/app/servicios/libro.service';
 })
 export class LibrosComponent implements OnInit {
 
-  public libros: Libro[] = [];
+  libros: Libro[] = [];
 
   constructor(private librosService: LibrosService) { }
 

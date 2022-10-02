@@ -4,10 +4,11 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'http://localhost:8080',
+  apiUrl: '/api/',
   libraryUrl:'/books',
   librosUrl: '/all',
   prestamosUrl: '/lendings',
+  authUrl:'/auth',
   usuariosUrl: '/users'
 };
 

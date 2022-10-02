@@ -10,30 +10,24 @@ import { Observable } from 'rxjs';
 
 export class UsuarioService {
 
-
-  private apiUrl = environment.apiUrl;
   private usuariosUrl = environment.usuariosUrl;
+  nombreUsuario: string = '';
 
   httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json',
-      'Access-Control-Allow-Methods': 'GET, PUT, POST, DELETE, HEAD, OPTIONS'
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Methods': 'GET,POST,OPTIONS,DELETE,PUT'
     }),
   };
 
   constructor(private http: HttpClient) {}
 
-  agregarUsuario(nombre:string, apellido:string, direccion:string, tel:string, username:string,pw:string): Observable<Usuario> {
-
-    const formData = new FormData();
-    formData.append('name', nombre);
-    formData.append('last_name', apellido);
-    formData.append('address', direccion);
-    formData.append('tel', tel);
-    formData.append('username', username);
-    formData.append('password', pw);
-
-    return this.http.post<Usuario>(this.apiUrl+this.usuariosUrl, formData);
+  agregarUsuario(usuario : Usuario): Observable<Usuario> {
+    return this.http.post<Usuario>('http://localhost:8080/users/register', usuario, this.httpOptions);
+  }
+  cargarUsuario(username: string): Observable<Usuario> {
+    return this.http.get<Usuario>('http://localhost:8080/users/email=' + username, this.httpOptions);
   }
 
 }

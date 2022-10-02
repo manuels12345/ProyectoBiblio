@@ -1,15 +1,23 @@
 export class Usuario {
-      public id?: number | null | undefined;
-      public name?: string;
-      public last_name?: string;
-      public address?: string;
-      public tel?: string | null | undefined;
-      public username?: string;
-      public password?: string;
-      public fault?: number | null | undefined;
-      public account_non_expired?: boolean | null | undefined;
-      public account_non_locked?: boolean | null | undefined;
-      public credentials_non_locked?: boolean | null | undefined;
-      public enabled?: boolean | null | undefined;
-      public deleted?: boolean | null | undefined;
-  }
+    id?: number;
+    account_non_expired?: boolean;
+    account_non_locked?: boolean;
+    credentials_non_expired?: boolean;
+    deleted?: boolean;
+    enabled?: boolean;
+    fault?: string;
+    username: string;
+    password: string;
+    name: string;
+    lastname: string;
+    address: string;
+    tel: string;
+    constructor(username: string, password: string, name: string, lastname: string, address: string, tel:string){
+    this.username = username;
+    this.password = password;
+    this.name = name;
+    this.lastname = lastname;
+    this.address = address;
+    this.tel = tel;
+    }
+}
