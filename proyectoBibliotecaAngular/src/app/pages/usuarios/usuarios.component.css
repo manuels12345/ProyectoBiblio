@@ -4,7 +4,10 @@
     box-sizing: border-box;
     transition: all 0.8s;
 }
-
+.form{
+  margin-left: 250px;
+  margin-top: 20px;
+}
 
 .usuarios{
     margin: 10px 10px 0 210px;
