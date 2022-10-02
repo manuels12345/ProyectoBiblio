@@ -18,7 +18,7 @@ public class BookController {
         List<BookDTO> books = bookService.getAll();
         return ResponseEntity.ok().body(books);
     }
-    @PostMapping // POST http://localhost:8080/books (necesario logearse)
+    @PostMapping("/create") // POST http://localhost:8080/books (necesario logearse)
     public ResponseEntity<BookDTO> createBook(@RequestBody BookDTO dto){
         BookDTO bookSaved = bookService.save(dto);
         return ResponseEntity.ok().body(bookSaved);

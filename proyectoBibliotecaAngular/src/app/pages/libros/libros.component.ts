@@ -9,6 +9,7 @@ import { LibrosService } from 'src/app/servicios/libro.service';
   templateUrl: './libros.component.html',
   styleUrls: ['./libros.component.css']
 })
+
 export class LibrosComponent implements OnInit {
 
   libros: Libro[] = [];
