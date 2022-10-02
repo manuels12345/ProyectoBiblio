@@ -24,7 +24,7 @@ import { NuevoUsuarioComponent } from './pages/nuevo-usuario/nuevo-usuario.compo
     DevolucionesComponent,
     UsuariosComponent,
     LibrosComponent,
-    LoginComponent
+    LoginComponent,
     NuevoUsuarioComponent,
     LibrosComponent,
   ],
