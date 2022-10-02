@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.*;
 public class UserController {
     @Autowired
     private UserService userService;
+    @CrossOrigin(origins = "http://localhost:4200")
     @PostMapping
     public ResponseEntity<UserDTO> userRegister(@RequestBody UserDTO dto){
         UserDTO userSaved = userService.save(dto);

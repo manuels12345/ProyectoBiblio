@@ -2,12 +2,12 @@
 	<div class="containerPortadaPrincipal">
 		<h2>ILIB: Libreria online</h2>
 	</div>
-	
+
 </div>
 <div class="principal">
 	<div class="containerPrincipal">
     <h2>Bienvenido</h2>
-    <p>Sistema de Gestión para Biblioteca Pública. Controle y administre de forma 		
+    <p>Sistema de Gestión para Biblioteca Pública. Controle y administre de forma
 			óptima y fácil el flujo de préstamos y devoluciones de Libros.
       <br>
       Esta herramienta le permitirá llevar un control completo y detallado de su Biblioteca,tendrá acceso a herramientas especiales para tareas específicas, como lo son:
@@ -22,35 +22,3 @@
 		</ul>
   </div>
 </div>
-<div class="container-fluid bghome">
-    <div class="row">
-      <div class="col-8">
-        <div>
-          <h1>Libros</h1>
-          <h1>DISPONIBLES</h1>
-        </div>
-        <table class="table">
-          <thead>
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">Titulo</th>
-              <th scope="col">Autor</th>
-              <th scope="col">Categoría</th>
-              <th scope="col">Lenguaje</th>
-            </tr>
-          </thead>
-          <tbody>
-
-            <tr *ngFor="let libro of libros; index as i">
-              <th scope="row">{{libro.id}}</th>
-              <td>{{libro.title}}</td>
-              <td>{{libro.author}}</td>
-              <td>{{libro.category}}</td>
-              <td>{{libro.lang}}</td>
-            </tr>
-
-          </tbody>
-        </table>
-
-      </div>
-    </div>

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { UsuarioService } from '../../servicios/usuario.service';
+import { Usuario } from '../../models/Usuario';
 
 @Component({
   selector: 'app-usuarios',
@@ -7,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UsuariosComponent implements OnInit {
 
-  constructor() { }
+  public usuario = new Usuario;
+
+  constructor(
+    private usuariosService: UsuarioService) {}
 
   ngOnInit(): void {
   }
+
+  onSubmit(nombre:string, apellido:string, direccion:string, tel:string, username:string,pw:string) {
+    return this.usuariosService.agregarUsuario(nombre,apellido,direccion,tel,username,pw).subscribe((data) => {
+      alert(data);
+    });
+  }
+
 
 }

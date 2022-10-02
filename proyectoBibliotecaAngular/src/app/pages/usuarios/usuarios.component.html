@@ -3,29 +3,29 @@
   <div class="form-row">
     <div class="form-group col-md-6">
       <label for="inputName">Nombre</label>
-      <input type="text" class="form-control" placeholder="Nombre completo">
+      <input type="text" class="form-control" #nombre placeholder="Nombre completo">
     </div>
     <div class="form-group col-md-6">
       <label for="inputlastName">Apellido</label>
-      <input type="text" class="form-control" placeholder="Apellido">
+      <input type="text" class="form-control" #apellido placeholder="Apellido">
     </div>
     <div class="form-group col-md-6">
       <label for="inputAddress">Dirección</label>
-      <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+      <input type="text" class="form-control" #direccion id="inputAddress" placeholder="1234 Main St">
     </div>
     <div class="form-group col-md-6">
       <label for="inputtelephone">Teléfono</label>
-      <input type="number" class="form-control" id="inputtelephone" placeholder="ingresar numero teléfonico sin 0 ni 15 ">
+      <input type="number" class="form-control" #tel id="inputtelephone" placeholder="ingresar numero teléfonico sin 0 ni 15 ">
     </div>
     <div class="form-group col-md-6">
       <label for="inputEmail4">Email</label>
-      <input type="email" class="form-control" id="inputEmail4" placeholder="email@ejemplo.com">
+      <input type="email" class="form-control" #username id="inputEmail4" placeholder="email@ejemplo.com">
     </div>
     <div class="form-group col-md-6">
       <label for="inputPassword6">Contraseña</label>
-      <input type="password" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
+      <input type="password" id="inputPassword6" #pw class="form-control" aria-describedby="passwordHelpInline">
       <small id="passwordHelpInline" class="text-muted">Debe contener entre 8-20 caracteres.</small>
     </div>
-    <button class="btn btn-primary" type="submit">Registrarse</button>
+    <button class="btn btn-primary" type="submit" (click)="onSubmit(nombre.value, apellido.value, direccion.value, tel.value, username.value, pw.value)">Registrarse</button>
   </div>
 </form>

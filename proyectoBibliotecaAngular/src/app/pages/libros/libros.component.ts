@@ -24,7 +24,6 @@ export class LibrosComponent implements OnInit {
       data.forEach((dato) =>{
         this.libros.push(dato);
       });
-      console.log(data);
       return data;
     });
   }
