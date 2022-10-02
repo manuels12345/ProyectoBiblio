@@ -12,7 +12,11 @@ import { UsuariosComponent } from './pages/usuarios/usuarios.component';
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { LibrosComponent } from './pages/libros/libros.component';
+<<<<<<< HEAD
 import { LoginComponent } from './pages/login/login.component';
+=======
+import { NuevoUsuarioComponent } from './pages/nuevo-usuario/nuevo-usuario.component';
+>>>>>>> 27d1615a7005b1bcc802b1a2bc5f33d4d5f3ce86
 
 @NgModule({
   declarations: [
@@ -23,7 +27,11 @@ import { LoginComponent } from './pages/login/login.component';
     DevolucionesComponent,
     UsuariosComponent,
     LibrosComponent,
+<<<<<<< HEAD
     LoginComponent
+=======
+    NuevoUsuarioComponent,
+>>>>>>> 27d1615a7005b1bcc802b1a2bc5f33d4d5f3ce86
   ],
   imports: [
     BrowserModule,
