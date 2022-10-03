@@ -36,7 +36,6 @@
 .principal .containerPrincipal{
     margin: 0 20px;
     width: 70em;
-    height: 400px;
     background-color:#299bff42;
     padding: 30px 20px;
     border-radius: 5px;
@@ -72,12 +71,14 @@
     .portadaPrincipal .containerPortadaPrincipal h2{
         font-size: 25px;
     }
+    .principal{
+        margin-left:170px; 
+    }
     .principal .containerPrincipal{
-        height: 350px;
         font-size: 14px;
         padding: 10px 20px;
-
     }
+
     .principal .containerPrincipal h2{
         font-size: 18px;
     }
@@ -98,18 +99,13 @@
     .portadaPrincipal .containerPortadaPrincipal h2{
         font-size: 20px;
     }
-    .principal .containerPrincipal{
-        height: 350px;
-        font-size: 14px;
-        padding: 10px 20px;
 
-    }
     .principal {
         margin-left:120px ;
     }
     .principal .containerPrincipal{
         font-size: 12px;
-        height:400px;
+        padding: 10px 20px;
     }
     .principal .containerPrincipal ul li{
     margin-left: 4em;        
@@ -134,7 +130,6 @@
     }
     .principal .containerPrincipal{
         margin: 0 5px;
-        height: 420px;
         font-size: 10px;
         padding: 2px;
     }
