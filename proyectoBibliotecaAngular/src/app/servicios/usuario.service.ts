@@ -10,7 +10,6 @@ import { Observable } from 'rxjs';
 
 export class UsuarioService {
 
-  private usuariosUrl = environment.usuariosUrl;
   nombreUsuario: string = '';
 
   httpOptions = {

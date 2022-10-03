@@ -4,7 +4,6 @@ import { UsuarioService } from 'src/app/servicios/usuario.service';
 import { Usuario } from '../../models/Usuario';
 import { FormGroup, FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
-import { isEmpty } from 'rxjs';
 
 @Component({
   selector: 'app-usuarios',
