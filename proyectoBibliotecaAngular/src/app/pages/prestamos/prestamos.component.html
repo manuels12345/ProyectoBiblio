@@ -1,12 +1,12 @@
 
 <div class="pagPrestamos" [formGroup]="reserva">
-  <h2>Nuevo prestamo</h2>
-   <div class="containerPrestamo">
-      <h3>Id Usuario</h3>
+  <div class="containerPrestamo">
+    <h2>Nuevo prestamo</h2>
+    <h3>Id Usuario</h3>
     <p><input type="text" name="nombre" formControlName="user_id" value="" placeholder="Ingrese el folio del usuario"></p>
     <h3>Id Libro</h3>
-      <p><input type="text" name="nombre" formControlName="book_id" value="" placeholder="Ingrese el ID del libro a prestar"></p>
-      <button type="submit" id="botonPrestar" (click)="onSubmit()">Prestar</button>
+    <p><input type="text" name="nombre" formControlName="book_id" value="" placeholder="Ingrese el ID del libro a prestar"></p>
+    <button type="submit" id="botonPrestar" (click)="onSubmit()">Prestar</button>
   </div> 
-  <img class="imagenPrestamos" src="../../assets/imagensitio/libroprestamos.jpg" alt="imagen de un libro abierto">
+  <img class="imagenPrestamos" src="../../../assets/imagensitio/libroprestamos.jpg" alt="imagen de un libro abierto" >
 </div>
