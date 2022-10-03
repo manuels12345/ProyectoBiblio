@@ -1,10 +1,12 @@
 export class Reserva {
-  constructor(
-    public id: number | null | undefined,
-    public book_id: number,
-    public date_out: string,
-    public date_return: string | null | undefined,
-    public deleted: boolean | null | undefined,
-    public user_id: boolean | null | undefined
-  ) {}
+  id?: number;
+  user_id: string;
+  book_id: string;
+  date_out?: string;
+  date_return?: string;
+  deleted?: boolean;
+  constructor(user_id: string,book_id: string) {
+  this.user_id = user_id;
+  this.book_id = book_id;
+  }
 }

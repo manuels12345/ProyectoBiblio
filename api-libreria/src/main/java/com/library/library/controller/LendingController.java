@@ -15,7 +15,7 @@ public class LendingController{
     private LendingService lendingService;
     @Autowired
     private BookService bookService;
-    @PostMapping("/{idUser}/books/{idBook}") // POST http://localhost:8080/lendings/{idUser}/books/{idBook} (necesario logearse)
+    @PostMapping("/users/{idUser}/books/{idBook}") // POST http://localhost:8080/lendings/{idUser}/books/{idBook} (necesario logearse)
     public ResponseEntity<Void>bookReserve(@PathVariable Long idUser, @PathVariable Long idBook,
                                            @RequestBody LendingDTO lending)
     {
