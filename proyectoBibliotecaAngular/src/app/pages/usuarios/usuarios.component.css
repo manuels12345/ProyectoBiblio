@@ -1,50 +1,45 @@
-*{
-  padding: 0;
-  box-sizing: border-box;
-  transition: all 0.8s;
-}
-
 .formularioUsuario{
-  margin:20px 10px 0 210px;
-  background-color: #299bff42;
-  padding: 30px 20px;
-  border-radius: 5px;
-  box-shadow: -2px 2px 2px rgba(0, 0, 0, 0.188);
+    margin: 10px 15px 10px 200px;
+    text-align: center;
+
 }
 
 .formularioUsuario h2{
-  padding-left: 10px;
-  font-size: 25px;
+    padding: 10px;
+
 }
 
-.formularioUsuario .form-row{
-  margin-left:20%;
-  height: 450px;
-  padding: 20px 15px;
-  font-size: 18px;
+.formularioUsuario .containerFormulario{   
+    margin: 15px;
+    background-color: #299bff42;
+    border-radius: 5px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.188);
+    padding: 15px;
 }
-.formularioUsuario .form-row .form-group{
-  text-align: center;
-  width: 700px;
-  padding-top: 10px;
+.formularioUsuario .containerFormulario .datosFormulario{
+    padding-bottom: 10px;
+    translate:20% 0;
 }
 
-.formularioUsuario .form-row .form-group input{
-  padding: 2px;
+.formularioUsuario .containerFormulario .form-group input{
+    padding: 5px;
+    max-width: 60%;
+    position: relative;
+
+
+    
 }
 
 .btn{
-   margin-top: 30px;
-   margin-left:15em;
-   padding: 10px;
+
   
 }
 
 @media (max-width:1024px){
-  .formularioUsuario .form-row{
+  .formularioUsuario .containerFormulario{
       height: 470px;
   }
-  .formularioUsuario .form-row .form-group{
+  .formularioUsuario .containerFormulario .form-group{
       width: 450px;
       padding-top: 10px;
   }
@@ -59,15 +54,15 @@
   .formularioUsuario h2{
       font-size: 20px;
   }
-  .formularioUsuario .form-row{
+  .formularioUsuario .containerFormulario{
       height: 400px;
       font-size: 15px;
   }
-  .formularioUsuario .form-row .form-group{
+  .formularioUsuario .containerFormulario .form-group{
       width: 350px;
       padding-top: 5px;
   }
-  .formularioUsuario .form-row .form-group input{
+  .formularioUsuario .containerFormulario .form-group input{
       font-size: 12px;
   }
   .btn{
@@ -84,16 +79,16 @@
   .formularioUsuario h2{
       font-size: 18px;
   }
-  .formularioUsuario .form-row{
+  .formularioUsuario .containerFormulario{
       margin-left:10%;
       height: 400px;
       font-size: 13px;
   }
-  .formularioUsuario .form-row .form-group{
+  .formularioUsuario .containerFormulario .form-group{
       width: 200px;
       padding-top: 5px;
   }
-  .formularioUsuario .form-row .form-group input{
+  .formularioUsuario .containerFormulario .form-group input{
       font-size: 10px;
   }
   .btn{
@@ -111,16 +106,16 @@
       font-size: 15px;
       margin-bottom: 0;
   }
-  .formularioUsuario .form-row{
+  .formularioUsuario .containerFormulario{
       margin-left:0;
       height: 320px;
       font-size: 10px;
   }
-  .formularioUsuario .form-row .form-group{
+  .formularioUsuario .containerFormulario .form-group{
       width: 170px;
       padding-top: 2px;
   }
-  .formularioUsuario .form-row .form-group input{
+  .formularioUsuario .containerFormulario .form-group input{
       font-size: 8px;
   }
   .btn{
