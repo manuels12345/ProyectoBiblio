@@ -1,5 +1,5 @@
 .formularioUsuario{
-    margin: 10px 15px 10px 200px;
+    margin: 0 0 10px 200px;
     text-align: center;
 
 }
@@ -18,111 +18,90 @@
 }
 .formularioUsuario .containerFormulario .datosFormulario{
     padding-bottom: 10px;
-    translate:20% 0;
+
 }
 
-.formularioUsuario .containerFormulario .form-group input{
+.formularioUsuario .containerFormulario .datosFormulario input{
     padding: 5px;
     max-width: 60%;
     position: relative;
-
-
-    
+    translate:30% 0;    
 }
 
 .btn{
+    margin: 10px;
 
   
 }
 
 @media (max-width:1024px){
-  .formularioUsuario .containerFormulario{
-      height: 470px;
+    .formularioUsuario .containerFormulario{
+        width: ;
+    }
+
+  .formularioUsuario .containerFormulario .datosFormulario{
+
   }
-  .formularioUsuario .containerFormulario .form-group{
-      width: 450px;
-      padding-top: 10px;
-  }
-  .btn{
-      margin-left:10em;     
- }
 }   
 @media (max-width:768px){
   .formularioUsuario{
-      margin:10px 10px 0 180px;
+    margin-left: 170px;
   }
-  .formularioUsuario h2{
-      font-size: 20px;
-  }
+
   .formularioUsuario .containerFormulario{
-      height: 400px;
-      font-size: 15px;
+    text-align: center;
+    margin:10px;
   }
-  .formularioUsuario .containerFormulario .form-group{
-      width: 350px;
+  .formularioUsuario .containerFormulario .datosUsuario{
       padding-top: 5px;
   }
-  .formularioUsuario .containerFormulario .form-group input{
+  .formularioUsuario .containerFormulario .datosUsuario input{
       font-size: 12px;
   }
-  .btn{
-      margin-left:8em;     
-      font-size: 15px;
-      padding: 5px;
- }
 }
 
 @media (max-width:480px){
   .formularioUsuario{
-      margin:5px 10px 0 130px;
+      margin:0 10px 0 120px;
   }
   .formularioUsuario h2{
       font-size: 18px;
   }
   .formularioUsuario .containerFormulario{
-      margin-left:10%;
-      height: 400px;
       font-size: 13px;
   }
   .formularioUsuario .containerFormulario .form-group{
-      width: 200px;
       padding-top: 5px;
   }
   .formularioUsuario .containerFormulario .form-group input{
-      font-size: 10px;
+      font-size: 10px; 
   }
-  .btn{
-      margin-left:6em;     
+  .btn{    
       font-size: 10px;
-      padding: 5px;
  }
 }
 
 @media (max-width:320px){
   .formularioUsuario{
-      margin:5px 15px 0 85px;
+      margin:0 10px 0 70px;
   }
   .formularioUsuario h2{
       font-size: 15px;
       margin-bottom: 0;
   }
   .formularioUsuario .containerFormulario{
-      margin-left:0;
-      height: 320px;
       font-size: 10px;
   }
   .formularioUsuario .containerFormulario .form-group{
-      width: 170px;
-      padding-top: 2px;
   }
   .formularioUsuario .containerFormulario .form-group input{
       font-size: 8px;
+      padding: 2px;
   }
-  .btn{
-      margin-left:5em;     
+  .btn{  
       font-size: 10px;
       padding: 5px;
-      margin-top:10px;
+
  }
 
 }
