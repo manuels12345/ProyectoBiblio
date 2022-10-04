@@ -14,6 +14,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { LibrosComponent } from './pages/libros/libros.component';
 import { LoginComponent } from './pages/login/login.component';
 import { NuevoUsuarioComponent } from './pages/nuevo-usuario/nuevo-usuario.component';
+import { BannerComponent } from './layouts/banner/banner.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { NuevoUsuarioComponent } from './pages/nuevo-usuario/nuevo-usuario.compo
     LoginComponent,
     NuevoUsuarioComponent,
     LibrosComponent,
+    BannerComponent,
   ],
   imports: [
     BrowserModule,
