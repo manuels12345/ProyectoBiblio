@@ -8,13 +8,14 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 @RestController
-@RequestMapping("lendings")
+@CrossOrigin(origins = "http://localhost:4200")
+@RequestMapping("/lendings")
 public class LendingController{
     @Autowired
     private LendingService lendingService;
     @Autowired
     private BookService bookService;
-    @PostMapping("/{idUser}/books/{idBook}") // POST http://localhost:8080/lendings/{idUser}/books/{idBook} (necesario logearse)
+    @PostMapping("/users/{idUser}/books/{idBook}") // POST http://localhost:8080/lendings/{idUser}/books/{idBook} (necesario logearse)
     public ResponseEntity<Void>bookReserve(@PathVariable Long idUser, @PathVariable Long idBook,
                                            @RequestBody LendingDTO lending)
     {

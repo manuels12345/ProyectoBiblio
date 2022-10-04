@@ -11,10 +11,10 @@ import { DevolucionesComponent } from './pages/devoluciones/devoluciones.compone
 import { UsuariosComponent } from './pages/usuarios/usuarios.component';
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { DataTableComponent } from './components/data-table/data-table.component';
-import { DateFormatterPipe } from './pipes/date-formatter.pipe';
-import { DynamicPipe } from './pipes/dynamic.pipe';
 import { LibrosComponent } from './pages/libros/libros.component';
+import { LoginComponent } from './pages/login/login.component';
+import { NuevoUsuarioComponent } from './pages/nuevo-usuario/nuevo-usuario.component';
+import { BannerComponent } from './layouts/banner/banner.component';
 
 @NgModule({
   declarations: [
@@ -24,10 +24,11 @@ import { LibrosComponent } from './pages/libros/libros.component';
     PrestamosComponent,
     DevolucionesComponent,
     UsuariosComponent,
-    DataTableComponent,
-    DynamicPipe,
-    DateFormatterPipe,
     LibrosComponent,
+    LoginComponent,
+    NuevoUsuarioComponent,
+    LibrosComponent,
+    BannerComponent,
   ],
   imports: [
     BrowserModule,
@@ -37,7 +38,7 @@ import { LibrosComponent } from './pages/libros/libros.component';
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [DateFormatterPipe, DynamicPipe],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

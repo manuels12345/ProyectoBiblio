@@ -4,6 +4,7 @@ import com.library.library.dto.UserDTO;
 public interface UserService {
     UserDTO save (UserDTO dto);
     UserDTO getUserById(Long id);
+    UserDTO getByUsername(String username);
     UserDTO update(Long id, UserDTO user);
     void delete (Long id);
 }

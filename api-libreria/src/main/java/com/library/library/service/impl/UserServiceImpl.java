@@ -24,6 +24,14 @@ public class UserServiceImpl implements UserService {
         UserDTO dto = userMapper.userEntity2DTO(entity, true);
         return dto;
     }
+
+    @Override
+    public UserDTO getByUsername(String username) {
+        UserEntity entity = userRepository.findByUsername(username);
+        UserDTO dto = userMapper.userEntity2DTO(entity, true);
+        return dto;
+    }
+
     public UserDTO update(Long id, UserDTO user) {
         UserEntity entityId = userRepository.getReferenceById(id);
         UserEntity entity = userMapper.update(entityId,user);

@@ -1,6 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable, Output } from '@angular/core';
-import { environment } from 'src/environments/environment';
+import { environment } from '../../environments/environment';
 import { Libro } from '../models/Libro';
 import { Observable } from 'rxjs';
 
@@ -19,13 +19,15 @@ export class LibrosService {
   httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json',
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Methods': 'GET,POST,OPTIONS,DELETE,PUT'
     }),
   };
 
   constructor(private http: HttpClient) {}
 
   cargarLibros(): Observable<Libro[]> {
-    return this.http.get<Libro[]>(this.apiUrl+this.libreriaUrl+this.librosUrl);
+    return this.http.get<Libro[]>('http://localhost:8080/books/all', this.httpOptions);
   }
 
 }

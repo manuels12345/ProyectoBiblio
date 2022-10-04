@@ -1,23 +1,33 @@
-<!--
-<div class="pagUsuarios">
+<app-banner></app-banner>
+<form class="formularioUsuario form-control form" [formGroup]="datos">
+  <div class="containerFormulario form-row">
     <h2>Registrar nuevo usuario</h2>
-     <div class="containerUsuario">
-        <h3>Nombre</h3>
-      <p><input type="text" name="nombre" value="" placeholder="Ingrese el nombre"></p>
-      <h3>Apellido Paterno</h3>
-        <p><input type="text" name="apellidoPaterno" value="" placeholder="Ingrese el apellido paterno"></p>
-      <h3>Apellido Materno</h3>
-        <p><input type="text" name="apellidoMaterno" value="" placeholder="Ingrese el apellido materno"></p>
-        <h3>Dirección</h3>
-        <p><input type="text" name="direccion" value="" placeholder="Ingrese el domicilio"></p>
-        <h3>Teléfono</h3>
-        <p><input type="tel" name="telefono" value="" placeholder="Ingrese un número telefonico"></p>
-        <button type="submit" id="botonRegistrar">Registrar</button>
-
-        <img class="imagenUsuarios" src="../../assets/imagensitio/librosregistro.jpg" alt="imagen de una biblioteca de libros">
-
+    <div class="datosFormulario form-group">
+      <label for="inputName">Nombre</label>
+      <input type="text" class="form-control" formControlName="name" placeholder="Nombre completo">
     </div>
-  -->
-<div class="container text-center">
-</div>
-
+    <div class="datosFormulario form-group">
+      <label for="inputlastName">Apellido</label>
+      <input type="text" class="form-control" formControlName="lastname" placeholder="Apellido">
+    </div>
+    <div class="datosFormulario form-group">
+      <label for="inputAddress">Dirección</label>
+      <input type="text" class="form-control" formControlName="address" id="inputAddress" placeholder="1234 Main St">
+    </div>
+    <div class="datosFormulario form-group">
+      <label for="inputtelephone">Teléfono</label>
+      <input type="number" class="form-control" formControlName="tel" id="inputtelephone" placeholder="ingresar numero teléfonico sin 0 ni 15 ">
+    </div>
+    <div class="datosFormulario form-group">
+      <label for="inputEmail4">Email</label>
+      <input type="email" class="form-control" formControlName="username" id="inputEmail4" placeholder="email@ejemplo.com">
+    </div>
+    <div class="datosFormulario form-group">
+      <label for="inputPassword6">Contraseña</label>
+      <input type="password" id="inputPassword6" formControlName="password" class="form-control" aria-describedby="passwordHelpInline">
+      <small id="passwordHelpInline" class="text-muted">Debe contener entre 8-20 caracteres.</small>
+    </div>
+    <button class="btn btn-primary" type="submit" (click)="onSubmit()">Registrarse</button>
+    <button class="btn btn-primary" routerLink="/login">Ya tengo cuenta</button>
+  </div>
+</form>

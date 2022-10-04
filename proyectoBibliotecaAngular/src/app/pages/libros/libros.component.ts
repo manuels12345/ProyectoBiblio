@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { Libro } from 'src/app/models/Libro';
 import { LibrosService } from 'src/app/servicios/libro.service';
@@ -9,11 +10,13 @@ import { LibrosService } from 'src/app/servicios/libro.service';
   templateUrl: './libros.component.html',
   styleUrls: ['./libros.component.css']
 })
+
 export class LibrosComponent implements OnInit {
 
-  public libros: Libro[] = [];
+  idLibro!:number;
+  libros: Libro[] = [];
 
-  constructor(private librosService: LibrosService) { }
+  constructor(private librosService: LibrosService, private router: Router) { }
 
   ngOnInit(): void {
     this.cargarLibros();

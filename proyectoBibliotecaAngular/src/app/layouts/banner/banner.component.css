@@ -1,0 +1,42 @@
+
+.portadaPrincipal{
+  margin-left: 200px;
+  height: 150px;
+  background: url("https://cdn.pixabay.com/photo/2014/08/08/21/03/bookshelf-413705_960_720.jpg") center center;
+  opacity: 80%;
+}
+.portadaPrincipal .containerPortadaPrincipal{
+  text-align: center;
+  padding-top: 75px;
+}
+
+.portadaPrincipal .containerPortadaPrincipal h2{
+  color: #000000;
+  font-size: 40px;
+  background-color: rgba(231, 244, 255, 0.498);
+}
+
+@media (max-width:768px){
+  .portadaPrincipal{
+      margin-left: 170px;
+      height: 130px;
+  }
+  .portadaPrincipal .containerPortadaPrincipal{
+      padding-top: 50px;
+  }
+
+  .portadaPrincipal .containerPortadaPrincipal h2{
+      font-size: 25px;
+  }
+  .principal{
+      margin-left:170px;
+  }
+  .principal .containerPrincipal{
+      font-size: 14px;
+      padding: 10px 20px;
+  }
+
+  .principal .containerPrincipal h2{
+      font-size: 18px;
+  }
+}

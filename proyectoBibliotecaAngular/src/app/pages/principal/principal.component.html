@@ -1,48 +1,19 @@
+<app-banner></app-banner>
 <div class="principal">
+	<div class="containerPrincipal">
     <h2>Bienvenido</h2>
-    <div>
-        Sistema de Gestión para Biblioteca Pública. Controle y administre de forma óptima y fácil el flujo de préstamos y devoluciones de Libros.
-        <br>
-        Esta herramienta le permitirá llevar un control completo y detallado de su Biblioteca,tendrá acceso a herramientas especiales para tareas específicas, como lo son:
-        <ul>
-            <li>Préstamos</li>
-            <li>Devoluciones</li>
-            <li>Registro de Usuarios y Libros Nuevos </li>
-            <li>Edicion de Usuarios y Libros existentes</li>
-            <li>Eliminar todo tipo de Registros</li>
-            <li>Sección de Reportes de acciones en el sistema</li>
-         </ul>
-    </div>
+    <p>Sistema de Gestión para Biblioteca Pública. Controle y administre de forma
+			óptima y fácil el flujo de préstamos y devoluciones de Libros.
+      <br>
+      Esta herramienta le permitirá llevar un control completo y detallado de su Biblioteca,tendrá acceso a herramientas especiales para tareas específicas, como lo son:
+		</p>
+    <ul>
+			<li>Préstamos</li>
+			<li>Devoluciones</li>
+			<li>Registro de Usuarios y Libros Nuevos </li>
+			<li>Edicion de Usuarios y Libros existentes</li>
+			<li>Eliminar todo tipo de Registros</li>
+			<li>Sección de Reportes de acciones en el sistema</li>
+		</ul>
+  </div>
 </div>
-<div class="container-fluid bghome">
-    <div class="row">
-      <div class="col-8">
-        <div>
-          <h1>Libros</h1>
-          <h1>DISPONIBLES</h1>
-        </div>
-        <table class="table">
-          <thead>
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">Titulo</th>
-              <th scope="col">Autor</th>
-              <th scope="col">Categoría</th>
-              <th scope="col">Lenguaje</th>
-            </tr>
-          </thead>
-          <tbody>
-
-            <tr *ngFor="let libro of libros; index as i">
-              <th scope="row">{{libro.id}}</th>
-              <td>{{libro.title}}</td>
-              <td>{{libro.author}}</td>
-              <td>{{libro.category}}</td>
-              <td>{{libro.lang}}</td>
-            </tr>
-
-          </tbody>
-        </table>
-
-      </div>
-    </div>

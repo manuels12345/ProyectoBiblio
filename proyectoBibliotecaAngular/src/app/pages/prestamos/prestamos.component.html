@@ -1,14 +1,12 @@
-
-<div class="pagPrestamos">
-  <h2>Nuevo prestamo</h2>
-   <div class="containerPrestamo">
-      <h3>Folio Usuario</h3>
-    <p><input type="text" name="nombre" value="" placeholder="Ingrese el folio del usuario"></p>
-    <h3>Libro ID</h3>
-      <p><input type="text" name="nombre" value="" placeholder="Ingrese el ID del libro a prestar"></p>
-      <button type="submit" id="botonPrestar">Prestar</button>
-   
-  
-  </div> 
-  <img class="imagenPrestamos" src="../../assets/imagensitio/libroprestamos.jpg" alt="imagen de un libro abierto">
+<app-banner></app-banner>
+<div class="pagPrestamos" [formGroup]="reserva">
+  <div class="containerPrestamo">
+    <h2>Nuevo prestamo</h2>
+    <h3>Id Usuario</h3>
+    <p><input type="text" name="nombre" formControlName="user_id" value="" placeholder="Ingrese el folio del usuario"></p>
+    <h3>Id Libro</h3>
+    <p><input type="text" name="nombre" formControlName="book_id" value="" placeholder="Ingrese el ID del libro a prestar"></p>
+    <button type="submit" id="botonPrestar" (click)="onSubmit()">Prestar</button>
+  </div>
+  <img class="imagenPrestamos" src="../../../assets/imagensitio/libroprestamos.jpg" alt="imagen de un libro abierto" >
 </div>
