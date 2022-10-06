@@ -24,7 +24,7 @@ export class ReservaService {
     const idUsuario = reserva.user_id;
     const idBook = reserva.book_id;
 
-    return this.http.post<Reserva>('http://localhost:8080/lendigs/users/'+ idUsuario + '/books/' + idBook, reserva, this.httpOptions);
+    return this.http.post<Reserva>('http://localhost:8080/lendings/users/'+ idUsuario + '/books/' + idBook, reserva, this.httpOptions);
   }
 
 }
