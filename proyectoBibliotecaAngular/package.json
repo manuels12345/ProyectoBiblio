@@ -20,6 +20,8 @@
     "@angular/platform-browser": "^14.0.0",
     "@angular/platform-browser-dynamic": "^14.0.0",
     "@angular/router": "^14.0.0",
+    "@auth0/angular-jwt": "^5.1.0",
+    "@auth0/auth0-angular": "^1.11.0",
     "@popperjs/core": "^2.11.6",
     "bootstrap": "^5.2.1",
     "jquery": "^3.6.1",

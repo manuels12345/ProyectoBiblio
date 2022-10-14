@@ -1,8 +1,10 @@
 import { HttpClient, HttpHeaders, HttpResponse } from '@angular/common/http';
-import { Injectable, Output } from '@angular/core';
-import { environment } from 'src/environments/environment';
+import { Injectable } from '@angular/core';
 import { Usuario } from '../models/Usuario';
 import { Observable } from 'rxjs';
+import { AuthenticationRequest } from '../models/AuthenticationRequest';
+import { AuthenticationResponse } from '../models/AuthenticationResponse';
+import { User } from '@auth0/auth0-angular';
 
 @Injectable({
   providedIn: 'root',
@@ -23,10 +25,11 @@ export class UsuarioService {
   constructor(private http: HttpClient) {}
 
   agregarUsuario(usuario : Usuario): Observable<Usuario> {
-    return this.http.post<Usuario>('http://localhost:8080/users/register', usuario, this.httpOptions);
+    return this.http.post<Usuario>('http://localhost:8080/auth/register', usuario, this.httpOptions);
   }
-  cargarUsuario(username: string): Observable<Usuario> {
-    return this.http.get<Usuario>('http://localhost:8080/users/email=' + username, this.httpOptions);
+
+  loginUsuario(usuario: AuthenticationRequest): Observable<AuthenticationResponse> {
+    return this.http.post<AuthenticationResponse>('http://localhost:8080/auth/login', usuario, this.httpOptions);
   }
 
 }

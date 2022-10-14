@@ -31,7 +31,7 @@ export class UsuariosComponent implements OnInit {
 
   onSubmit() {
     const user = new Usuario(
-    
+
     this.datos.value['username'] as string,
     this.datos.value['password'] as string,
     this.datos.value['name'] as string,
@@ -42,6 +42,7 @@ export class UsuariosComponent implements OnInit {
     if(!this.datos.value['username'] || !this.datos.value['password'] || !this.datos.value['name'] || !this.datos.value['lastname'] || !this.datos.value['address'] || !this.datos.value['tel']){
       alert("Faltan datos");
     }
+
     return this.usuariosService.agregarUsuario(user).subscribe(user => {
       console.log(user);
       this.registrado = true;

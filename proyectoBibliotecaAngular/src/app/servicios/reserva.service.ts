@@ -1,3 +1,4 @@
+import { AppComponent } from 'src/app/app.component';
 import { HttpClient, HttpHeaders, HttpResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Reserva } from '../models/Reserva';
@@ -14,7 +15,8 @@ export class ReservaService {
     headers: new HttpHeaders({
       'Content-Type': 'application/json',
       'Access-Control-Allow-Origin': '*',
-      'Access-Control-Allow-Methods': 'GET,POST,OPTIONS,DELETE,PUT'
+      'Access-Control-Allow-Methods': 'GET,POST,OPTIONS,DELETE,PUT',
+      'Authorization':"localStorage.getItem('auth_token')"
     }),
   };
 
@@ -24,7 +26,6 @@ export class ReservaService {
     const idUsuario = reserva.user_id;
     const idBook = reserva.book_id;
 
-    return this.http.post<Reserva>('http://localhost:8080/lendings/users/'+ idUsuario + '/books/' + idBook, reserva, this.httpOptions);
+    return this.http.post<Reserva>('http://localhost:8080/lendings/users/'+ idUsuario + '/books/' + idBook, reserva, this.httpOptions.headers.set('Auth', localStorage.getItem()));
   }
-
 }

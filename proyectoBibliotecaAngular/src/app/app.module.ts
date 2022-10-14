@@ -16,6 +16,8 @@ import { LoginComponent } from './pages/login/login.component';
 import { NuevoUsuarioComponent } from './pages/nuevo-usuario/nuevo-usuario.component';
 import { BannerComponent } from './layouts/banner/banner.component';
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,4 +43,7 @@ import { BannerComponent } from './layouts/banner/banner.component';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+
+
+}

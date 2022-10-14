@@ -1,5 +1,6 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
+import { AppComponent } from 'src/app/app.component';
 
 import { Libro } from 'src/app/models/Libro';
 import { LibrosService } from 'src/app/servicios/libro.service';
@@ -16,7 +17,7 @@ export class LibrosComponent implements OnInit {
   idLibro!:number;
   libros: Libro[] = [];
 
-  constructor(private librosService: LibrosService, private router: Router) { }
+  constructor(private app: AppComponent, private librosService: LibrosService, private router: Router) { }
 
   ngOnInit(): void {
     this.cargarLibros();
@@ -31,5 +32,9 @@ export class LibrosComponent implements OnInit {
       return data;
     });
   }
-
+  
+  mostrarLogs():void{
+    console.log(this.app.jwt);
+    console.log(this.app.authenticated);
+  }
 }
