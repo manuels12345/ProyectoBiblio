@@ -1,25 +1,34 @@
 package com.library.library.controller;
 
 import com.library.library.dto.LendingDTO;
+import com.library.library.entity.LendingEntity;
+import com.library.library.repository.LendingRepository;
 import com.library.library.service.BookService;
 import com.library.library.service.LendingService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 @RestController
-@CrossOrigin(origins = "http://localhost:4200")
-@RequestMapping("/lendings")
+@RequestMapping("/lending")
+
 public class LendingController{
     @Autowired
     private LendingService lendingService;
     @Autowired
     private BookService bookService;
-    @PostMapping("/users/{idUser}/books/{idBook}") // POST http://localhost:8080/lendings/{idUser}/books/{idBook} (necesario logearse)
-    public ResponseEntity<Void>bookReserve(@PathVariable Long idUser, @PathVariable Long idBook,
-                                           @RequestBody LendingDTO lending)
-    {
+    @Autowired
+    private LendingRepository lendingRepository;
+
+    @CrossOrigin(origins = "http://localhost:4200")
+    @PostMapping("/user/{idUser}/book/{idBook}")
+    public ResponseEntity<Void>bookReserve(@PathVariable Long idUser,
+                                           @PathVariable Long idBook,
+                                           @RequestBody LendingDTO lending){
         if (!bookService.isAvailable(idBook)){
+            System.out.println("No hay mas disponibilidad");
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
         }
         lendingService.addReserve(idUser, idBook, lending);
@@ -51,5 +60,10 @@ public class LendingController{
     {
         lendingService.delete(idLending);
         return ResponseEntity.status(HttpStatus.CREATED).build();
+    }
+    @GetMapping("/all")
+    public ResponseEntity<List<LendingEntity>> getAllBooks(){
+        List<LendingEntity> lendings = lendingRepository.findAll();
+        return ResponseEntity.ok().body(lendings);
     }
 }

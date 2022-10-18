@@ -1,7 +1,6 @@
 package com.library.library.controller;
 
 import com.library.library.dto.UserDTO;
-import com.library.library.entity.UserEntity;
 import com.library.library.repository.UserRepository;
 import com.library.library.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
