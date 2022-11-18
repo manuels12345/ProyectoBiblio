@@ -1,5 +1,11 @@
 /* You can add global styles to this file, and also import other */
 
-    html, body { height: 100%; }
+    html, body { 
+        height: 100%;
+     }
 
-    body { margin: 0; font-family: Roboto,'Poppins', sans-serif; }
+    body { 
+        margin: 0; 
+        font-family: Roboto,'Poppins',sans-serif;
+        
+    }

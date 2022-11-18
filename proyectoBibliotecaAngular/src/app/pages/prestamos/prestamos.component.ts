@@ -28,10 +28,10 @@ export class PrestamosComponent implements OnInit {
 
       if(!this.reserva.value['user_id'] || !this.reserva.value['book_id']){
         alert("Faltan datos");
-      }
+      }/*
       return this.reservaService.agregarReserva(reserva).subscribe(reserva => {
         console.log(reserva);
-      })
+      })*/
   }
 
 }

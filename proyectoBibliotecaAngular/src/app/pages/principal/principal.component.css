@@ -4,25 +4,8 @@
     transition: all 0.8s;
 }
 
-.portadaPrincipal{
-    margin-left: 200px;
-    height: 150px;
-    background: url("https://cdn.pixabay.com/photo/2014/08/08/21/03/bookshelf-413705_960_720.jpg") center center;
-    opacity: 80%;
-}
-.portadaPrincipal .containerPortadaPrincipal{
-    text-align: center;
-    padding-top: 75px;
-}
-
-.portadaPrincipal .containerPortadaPrincipal h2{
-    color: #000000;
-    font-size: 40px;
-    background-color: rgba(231, 244, 255, 0.498);
-}
 
 .principal{
-    margin-top:20px;
     margin-left:200px; 
     display: flex;
     position: relative;
@@ -33,11 +16,11 @@
     transition: all 0.5s;
 }
 
-.principal .containerPrincipal{
-    margin: 0 20px;
-    width: 70em;
+.containerPrincipal{
+    margin:20px auto;
+    width: 80%;
     background-color:#299bff42;
-    padding: 30px 20px;
+    padding: 30px;
     border-radius: 5px;
     box-shadow: -2px 2px 2px rgba(0, 0, 0, 0.188);
     font-size: 18px;
@@ -45,15 +28,17 @@
 }
 
 
-.principal .containerPrincipal h2{
+.containerPrincipal h2{
     text-align: center;
+    font-size: 25px;
+    padding-bottom: 20px;
 }
 
-.principal .containerPrincipal ul{
+.containerPrincipal ul{
     margin-top: 10px;
 }
 
-.principal .containerPrincipal ul li {
+.containerPrincipal ul li {
     margin-left: 5em;
     padding: 2px;
     list-style-type:circle;
@@ -64,22 +49,22 @@
         margin-left: 170px;
         height: 130px;
     }
-    .portadaPrincipal .containerPortadaPrincipal{
+    .containerPortadaPrincipal{
         padding-top: 50px;
     }
     
-    .portadaPrincipal .containerPortadaPrincipal h2{
+    .containerPortadaPrincipal h2{
         font-size: 25px;
     }
     .principal{
         margin-left:170px; 
     }
-    .principal .containerPrincipal{
+    .containerPrincipal{
         font-size: 14px;
         padding: 10px 20px;
     }
 
-    .principal .containerPrincipal h2{
+    .containerPrincipal h2{
         font-size: 18px;
     }
 }

@@ -1,52 +1,45 @@
 
 *{  
     word-spacing: 2px;
+    
 }
 
 .pagPrestamos{
-    margin-top:20px;
-    margin-left:200px; 
-    padding-right: 10px;
+    margin: 20px 20px 0 200px;
     display: flex;
     position: relative;
+    
 }
 h2{
-    padding-top: 20px;
-    padding-bottom: 20px;
-    margin-left: 0;
+    padding: 20px 0;
     font-size: 25px;
 }
 
-.pagPrestamos .containerPrestamo {
-    margin:15px 0 0 10px;
+.containerPrestamo {
+    margin: 20px auto;
     background-color: #299bff42;
     border-radius: 5px;
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.188);
     text-align: center;
     width: 60%; 
-    margin: 0 20px;
-    width: 50em;
-    padding: 30px 20px;
-
+    padding:20px;
 }
 
-.pagPrestamos .containerPrestamo h3 {
+.containerPrestamo h3 {
 	font-size:20px;
 }
 
-.pagPrestamos .containerPrestamo input{
+.containerPrestamo input{
 	width: 80%;
 	border: 1px solid white;
     border-radius: 5px;
 	border-bottom: 1px solid #2860d7;
-	padding-bottom: 10px;
-    padding-left: 1%;
+	padding: 10px;
 	
 }
 
-.pagPrestamos .containerPrestamo #botonPrestar{
-	margin-top: 50px;
-    margin-bottom: 50px;
+#botonPrestar{
+	margin: 50px 0;
 	padding: 10px;
 	border-radius:5px;
     width: 30%;
@@ -55,65 +48,52 @@ h2{
 	font-size: 15px;
 }
 
-.pagPrestamos .containerPrestamo #botonPrestar:hover{
+#botonPrestar:hover{
     background-color:#103b97;
     transition: all 0.5s;
 }
-
-.pagPrestamos .imagenPrestamos{
-    max-width: 30%;
-    height: 200px;
-    margin: 150px 5px 0 0;
-    border-radius: 10px;
-    }
-
-@media (max-width:1024px){
-    .pagPrestamos .imagenPrestamos{
-        max-width: 20%;
-        height: 150px;
-    }
-    
+.imagen{
+    width: 30%;
+    height: 500px;
+    margin: 20px auto;
 }
 
+.imagenPrestamos{
+    width: 100%;
+    height: 100%;
+     object-fit: cover;
+    }
+
+
 @media (max-width:768px){
-    .pagPrestamos .containerPrestamo {
-        text-align: center;
-        width: 100%; 
-        margin:10px;
+.containerPrestamo input{
+    padding:5px;
+    width:100%;
+    font-size:15px; 
     }
-    .pagPrestamos .imagenPrestamos {
-        visibility:hidden;
-        width: 0;
+
+    #botonPrestar{
+        margin:20px;
+        padding:5px;
+        font-size:10px;
     }
+
 }
 
 @media (max-width:480px){
     .pagPrestamos{
         margin:10px 10px 0 120px ;
     }
-    .pagPrestamos .containerPrestamo{
-        font-size: 10px;
-        margin-right: 0;
-    }
-    .pagPrestamos .containerPrestamo h2{
-        font-size: 20px;
-    }
-
-    .pagPrestamos .containerPrestamo h3{
-        font-size: 15px;
-        margin-bottom: 0;
-    }
-
-    .pagPrestamos .containerPrestamo #botonPrestar{
-        margin-top: 30px;
-        margin-bottom: 30px;
-        padding: 5px;
-        border-radius:5px;
-        width: 30%;
-        background-color:#2860d7;
-        color:white;
-        font-size: 15px;
-    }
+    .containerPrestamo input{
+        padding:5px;
+        width:100%;
+        font-size:10px; 
+        }
+    
+        #botonPrestar{
+            margin:10px;
+            padding:5px;
+        }
 }
 
 @media (max-width:320px){
@@ -121,22 +101,22 @@ h2{
         margin-left: 75px;
     }
 
-    .pagPrestamos .containerPrestamo{
+    .containerPrestamo{
         font-size: 10px;
         margin-right: 0;
     }
-    .pagPrestamos .containerPrestamo h2{
+    .containerPrestamo h2{
         font-size: 15px;
         margin-bottom: 0;
     }
-    .pagPrestamos .containerPrestamo h3{
+    .containerPrestamo h3{
         font-size: 10px;
     }
-    .pagPrestamos .containerPrestamo input{
+    .containerPrestamo input{
         font-size: 8px;
         width: 100%;
     }
-    .pagPrestamos .containerPrestamo #botonPrestar{
+    #botonPrestar{
         margin-top: 10px;
         margin-bottom: 0;
         font-size: 10px;

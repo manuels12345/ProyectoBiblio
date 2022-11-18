@@ -21,11 +21,12 @@ export class ReservaService {
   };
 
   constructor(private http: HttpClient) {}
-
+/*
   agregarReserva(reserva : Reserva): Observable<Reserva> {
     const idUsuario = reserva.user_id;
     const idBook = reserva.book_id;
 
     return this.http.post<Reserva>('http://localhost:8080/lendings/users/'+ idUsuario + '/books/' + idBook, reserva, this.httpOptions.headers.set('Auth', localStorage.getItem()));
-  }
+  }*/
 }
+
